@@ -15,31 +15,34 @@
 
 </head>
 <body>
-	
+	<h3>JSP 스크립틀릿</h3>
 	<%
-	if( "1".equals( request.getParameter("color") ) ) {	
+	if ("1".equals(request.getParameter("color"))) {
 	%>
-		<span style="color: red">빨강</span>
+	<span style="color: red">빨강</span>
 	<%
-	} else if( "2".equals( request.getParameter("color") ) ) {	
+	} else if ("2".equals(request.getParameter("color"))) {
 	%>
-		<span style="color: green">녹색</span>
+	<span style="color: green">녹색</span>
 	<%
-	} else if( "3".equals( request.getParameter("color") ) ) {	
+	} else if ("3".equals(request.getParameter("color"))) {
 	%>
-		<span style="color: blue">파랑</span>
+	<span style="color: blue">파랑</span>
 	<%
 	}
 	%>
 
 
-
-	
-
-
-
-
-
-
+	<h3>JSTL 코드</h3>
+	<!-- 조건 분기 -->
+	<c:if test="${ param.color==1}">
+		<span style="color: red">빨강</span>
+	</c:if>
+	<c:if test="${ param.color==2}">
+		<span style="color: green">녹색</span>
+	</c:if>
+	<c:if test="${ param.color==3}">
+		<span style="color: blue">파랑</span>
+	</c:if>
 </body>
 </html>
